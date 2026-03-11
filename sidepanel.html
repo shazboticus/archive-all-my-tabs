@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabEx Side Panel</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    .progress-container { width: 100%; background: #eee; height: 20px; margin-top: 10px; }
+    .progress-bar { height: 100%; background: #76c7c0; width: 0%; }
+    label { display: block; margin-bottom: 5px; }
+    input[type="number"] { width: 50px; }
+  </style>
+</head>
+
+<body>
+  <h1>Export Tabs Options</h1>
+  <div>
+    <label><input type="checkbox" id="screenshots"> Screenshots</label>
+    <label><input type="checkbox" id="descriptions"> Descriptions</label>
+    <label><input type="checkbox" id="bodytext"> Body Text</label>
+    <label>Max Screenshots: <input type="number" id="maxScreenshots" min="1" value="5"></label>
+  </div>
+  <button id="exportBtn">Export Tabs</button>
+  <button id="stopBtn" disabled>Stop/Abort</button>
+  <div id="status">Status: Idle</div>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+  </div>
+  <div id="appNotes">
+    <h2>Notes:</h2>
+    <ul>
+      <li>Exported data will be displayed in a report.</li>
+      <li>Including screenshots, descriptions, or body text may require additional permissions and can slow down the export process.</li>
+      <li>Max Screenshots option limits the number of screenshots captured per tab before prompting for confirmation.</li>
+      <li>If tabs are not loaded, the screenshot/description/body text may not be captured - recommend loading all tabs before exporting.</li>
+    </ul>
+  </div>
+  <script src="sidepanel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Export Report</title>
+  <script type="module" src="report.mjs" defer></script>
+  <style>
+    #report {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      margin: 1%;
+      width: 98%;
+      background-color: #ceccef;
+    }
+
+    .entry-div {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      margin-bottom: 1em;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    .sub-entry-div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1em;
+      min-width: 30%;
+      flex-wrap: wrap;
+      flex: 1 1 auto;
+      padding-left: 18px;
+    }
+
+    .details-div {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      align-items: stretch;
+      flex-wrap: wrap;
+      margin-left: 5px;
+    }
+
+    img.favicon {
+      width: 16px;
+      height: 16px;
+      font-size: 16px; 
+      object-fit: contain; /* ensures it fits within the size */
+      vertical-align: bottom; /* keeps them aligned with text */
+    }
+
+    .icon-div {
+      flex: none;
+    }
+
+    .title-line {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .url-line {
+      font-family: monospace;
+      color: #555;
+      margin-left: 18px;
+      font-size: 14px;
+      word-break: break-all;
+    }
+
+    .description {
+      font-style: italic;
+      margin-left: 18px;
+      font-size: 14px;
+      /* indent under title */
+    }
+
+    .bodytext {
+      margin-left: 18px;
+      font-size: 14px;
+      /* indent under title */
+    }
+
+    .screenshot {
+      margin-top: 0.5em;
+      max-width: 100%;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .note-line {
+      font-style: italic;
+      color: #a33;
+      font-size: 14px;
+      /* aligns under title/url */
+    }
+
+    .table-view {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .table-view th, .table-view td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Tab Export Report</h1>
+  <button id="toggleFormat">Switch to Table View</button>
+  <button id="copyAll">Copy All to Clipboard</button>
+  <div id="report"></div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TabEx - For exporting all tabs",
+  "version": "1.0",
+  "description": "Export all tabs with titles, URLs, and configurable options for screenshots and descriptions.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "sidePanel",
+    "scripting"
+  ],
+  "optional_permissions": [
+    "clipboardWrite"
+  ],
+  "optional_host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "options_page": "options.html"
+}

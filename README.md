@@ -6,8 +6,19 @@ User options include the ability to export from each tab:
 - a screenshot, and
 - a description.
 
-## User Flow
-(after installing extension and enabling)
+## Why
+I tend to open a lot of tabs and then leave them open (probably FOMO). This is notoriously bad for the following (non-exhaustive) reasons: 
+- computer performance,
+- my sanity,
+- other people's sanity, and
+- cyber security.
+
+I found existing solutions such as OneTab were insufficient and I still remember what happened to "The Great Suspender" so trust in browser extensions is low. 
+
+As a result, I designed and developed this extension to allow me to extract data from each open tab. I can then archive these and search through them at a later date if necessary. 
+
+## How to Use and User Flow
+(after installing extension and enabling - if you need a reminder how to do this: https://learn.microsoft.com/en-us/microsoft-edge/extensions/getting-started/extension-sideloading)
 1. Select the extension (sidebar opens)
 2. Select optional extras, specify maximum screenshots 
 3. Select "Export Tabs" Button

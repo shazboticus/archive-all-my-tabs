@@ -19,6 +19,7 @@ async function render() {
   ]);
 
   const container = document.getElementById("report");
+  document.title = `Tab Export Report - ${new Date().toLocaleString()}`;
   container.innerHTML = "";
 
   if (!exportData) return;
